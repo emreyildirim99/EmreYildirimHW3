@@ -1,0 +1,16 @@
+﻿@model IEnumerable<CetTodoWeb.Models.Category>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                   
+            @foreach (var item in Model)
+            {
+                <a class="dropdown-item" asp-area="" asp-controller="Todo" asp-action="Index" asp-route-categoryID="@item.Id">@item.Name</a>
+            }
+                                                   
+        </div>
+    </div>
+
